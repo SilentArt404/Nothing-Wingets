@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="clockdate_widget_title">Clock &amp; Date</string>
+    <string name="weather_widget_title">Weather</string>
+    <string name="calendar_widget_title">Calendar</string>
+    <string name="batterystatus_widget_title">Battery &amp; status</string>
+    <string name="quicktoggles_widget_title">Quick toggles</string>
+
+    <string name="widget_time_format_12h">h:mm a</string>
+    <string name="widget_time_format_24h">HH:mm</string>
+    <string name="widget_date_format">MMM d, yyyy</string>
+</resources>

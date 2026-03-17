@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="clockdate_widget_title">Часы и дата</string>
+    <string name="weather_widget_title">Погода</string>
+    <string name="calendar_widget_title">Календарь</string>
+    <string name="batterystatus_widget_title">Батарея и статусы</string>
+    <string name="quicktoggles_widget_title">Быстрые переключатели</string>
+
+    <string name="widget_time_format_12h">h:mm a</string>
+    <string name="widget_time_format_24h">HH:mm</string>
+    <string name="widget_date_format">dd.MM.yyyy</string>
+</resources>
