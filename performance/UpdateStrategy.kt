@@ -2,6 +2,8 @@ package performance
 
 import android.content.Context
 import androidx.work.Constraints
+import androidx.work.Data
+import androidx.work.ExistingWorkPolicy
 import androidx.work.NetworkType
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
@@ -54,10 +56,16 @@ class UpdateStrategy(
         val request = OneTimeWorkRequestBuilder<WidgetRefreshWorker>()
             .setConstraints(constraints)
             .setInitialDelay(delayMinutes, TimeUnit.MINUTES)
+            .setInputData(
+                Data.Builder()
+                    .putString(WidgetRefreshWorker.REFRESH_NAME_KEY, uniqueName)
+                    .build()
+            )
             .addTag(uniqueName)
             .build()
 
-        WorkManager.getInstance(context).enqueue(request)
+        WorkManager.getInstance(context)
+            .enqueueUniqueWork(uniqueName, ExistingWorkPolicy.REPLACE, request)
         return request
     }
 }
